@@ -4,9 +4,17 @@ This environment realizes coding and building hex and wav file at everywhere usi
 
 ## Instruction
 
-1. Create Github Codespaces in this repo. (Or open mutable-dev-environment folder using VS Code in your local machine. Then reopen using Remote container.)
+1. Fork this repo to your account. Then edit .devcontainer/devcontainer.json USER_GITHUB_URL if using your forked eurorack repo.
 
-2. In the TERMINAL, execute module's build command.
+For example,
+
+```
+    "USER_GITHUB_URL": "https://github.com/your-account-name/eurorack.git",
+```
+
+2. Create Github Codespaces. (Or open mutable-dev-environment folder using VS Code in your local machine. Then reopen using Remote container.)
+
+3. In the TERMINAL, execute module's build command.
 
 For example,
 
@@ -17,6 +25,8 @@ make -f marbles/makefile wav
 ```
 
 then, marbles.hex and marbles.wav file is generated in the eurorack-modules/build/marbles folder.
+
+And you can download the files.
 
 ## notes
 
@@ -34,4 +44,4 @@ To update firmware, please use playing wav file.
 
 To first write firmware to DIY module to the empty MCU, please use firmware writing tool (openocd etc) in the host computer.
 
-Currently this environment using local docker host with VS code remote container doesn't support arm64 machine.
+Currently this environment with using local docker host with VS code remote container doesn't support arm64 local machine.
