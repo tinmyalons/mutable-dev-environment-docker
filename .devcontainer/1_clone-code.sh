@@ -6,8 +6,8 @@
 # CODE_ROOT=/home/vagrant
 
 # Code is stored in a directory shared between the VM and the host.
-# Originally CODE_ROOT should be "/vagrant", but currently Codespaces doesn't support bind type mount, so Codespace's default mount "/workspaces" is used.
-CODE_ROOT=/workspaces
+# Originally CODE_ROOT should be "/vagrant", but currently Codespaces doesn't support bind type mount, so Codespace's default mount "/workspaces/mutable-dev-environment" is used.
+CODE_ROOT=/workspaces/mutable-dev-environment
 WORKING_DIR_NAME=eurorack-modules
 DEV_ENV="${CODE_ROOT}/${WORKING_DIR_NAME}"
 MI_REPO="https://github.com/pichenettes/eurorack.git"
@@ -15,6 +15,7 @@ MI_REPO="https://github.com/pichenettes/eurorack.git"
 # test if the dev_env directory already exists
 if [ -d "$DEV_ENV" ]; then
     echo "WARNING: Working directory ${DEV_ENV} already exists, skipping git clone"
+    cd $DEV_ENV
 else
     # Clone the modules source code. If there was a alternative git URL
     # provided as an argument to this script, than it will be clone.

@@ -18,9 +18,9 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	// Originally it should be "/vagrant", but currently Codespaces doesn't support bind type mount, so Codespace's default mount "/workspaces" is used.
-	"workspaceFolder": "/workspaces",
-    "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspaces",
+	// Originally it should be "/vagrant", but currently Codespaces doesn't support bind type mount, so Codespace's default mount "/workspaces/mutable-dev-environment" is used.
+	// "workspaceFolder": "/workspaces/mutable-dev-environment",
+    // "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspaces/mutable-dev-environment",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo ./0_install-toolchain.sh && ./1_clone-code.sh", // "uname -a",
