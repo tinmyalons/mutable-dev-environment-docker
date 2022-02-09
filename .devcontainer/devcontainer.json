@@ -18,14 +18,13 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	"workspaceFolder": "/vagrant",
-    "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/vagrant",
-
-    "initializeCommand": "cp ${localWorkspaceFolder}/0_install-toolchain.sh .devcontainer/",
+	// Originally it should be "/vagrant", but currently Codespaces doesn't support bind type mount, so Codespace's default mount "/workspaces/mutable-dev-environment" is used.
+	// "workspaceFolder": "/workspaces/mutable-dev-environment",
+    // "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspaces/mutable-dev-environment",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "sudo ./0_install-toolchain.sh && ./1_clone-code.sh", // "uname -a",
-	"postCreateCommand": "./1_clone-code.sh", // "uname -a",
+	"postCreateCommand": "./.devcontainer/1_clone-code.sh", // "uname -a",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vagrant",
