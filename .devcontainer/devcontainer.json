@@ -23,14 +23,15 @@
     // "workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/workspaces/mutable-dev-environment",
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "sudo ./0_install-toolchain.sh && ./1_clone-code.sh", // "uname -a",
-	"postCreateCommand": "./.devcontainer/1_clone-code.sh", // "uname -a",
+	"postCreateCommand": "./.devcontainer/1_clone-code.sh",
+    // Comment out and edit to clone your github repository instead.
+	// "postCreateCommand": "USER_GITHUB_URL=https://github.com/your-account-name/eurorack.git && ./.devcontainer/1_clone-code.sh $USER_GITHUB_URL",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vagrant",
 
 	"containerEnv": {
 		// Comment out and edit to clone your github repository instead.
-		// "USER_GITHUB_URL": "https://github.com/your-account-name/eurorack.git",
+		// "USER_GITHUB_URL": "https://github.com/your-account-name/eurorack.git"
 	}
 }
