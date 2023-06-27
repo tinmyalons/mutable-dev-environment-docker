@@ -70,4 +70,4 @@ To update firmware, please use playing wav file.
 
 To first write firmware to DIY module to the empty MCU, please use firmware writing tool (openocd etc) in the host computer.
 
-Currently this environment with using local docker host with VS code remote container doesn't support arm64 local machine.
+If linux/amd64 environment of docker buildx installed, this environment may works also on arm64, apple silicon machine by qemu (not yet tested).

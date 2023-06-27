@@ -1,6 +1,6 @@
 # [Choice] Ubuntu version (use hirsute or bionic on local arm64/Apple Silicon): hirsute, focal, bionic
 ARG VARIANT="focal"
-FROM buildpack-deps:${VARIANT}-curl
+FROM --platform=linux/amd64 buildpack-deps:${VARIANT}-curl
 
 # Options for setup script
 ARG INSTALL_ZSH="true"
